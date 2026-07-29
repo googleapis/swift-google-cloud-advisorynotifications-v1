@@ -25,19 +25,19 @@ extension Clients {
   protocol AdvisoryNotificationsServiceStub {
     func listNotifications(
       request: ListNotificationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.ListNotificationsResponse
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.ListNotificationsResponse
 
     func getNotification(
       request: GetNotificationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.Notification
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.Notification
 
     func getSettings(
       request: GetSettingsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.Settings
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.Settings
 
     func updateSettings(
       request: UpdateSettingsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.Settings
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.Settings
   }
 
   class AdvisoryNotificationsServiceTransport: AdvisoryNotificationsServiceStub {
@@ -50,7 +50,7 @@ extension Clients {
 
     public func listNotifications(
       request: ListNotificationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.ListNotificationsResponse {
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.ListNotificationsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -70,12 +70,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAdvisorynotificationsV1.ListNotificationsResponse.self, from: data)
+        GoogleCloudAdvisoryNotificationsV1.ListNotificationsResponse.self, from: data)
     }
 
     public func getNotification(
       request: GetNotificationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.Notification {
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.Notification {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -92,12 +92,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAdvisorynotificationsV1.Notification.self, from: data)
+        GoogleCloudAdvisoryNotificationsV1.Notification.self, from: data)
     }
 
     public func getSettings(
       request: GetSettingsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.Settings {
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.Settings {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -112,12 +112,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAdvisorynotificationsV1.Settings.self, from: data)
+        GoogleCloudAdvisoryNotificationsV1.Settings.self, from: data)
     }
 
     public func updateSettings(
       request: UpdateSettingsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.Settings {
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.Settings {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.settings.map({ $0.name }), !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding(
@@ -137,7 +137,7 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAdvisorynotificationsV1.Settings.self, from: data)
+        GoogleCloudAdvisoryNotificationsV1.Settings.self, from: data)
     }
   }
 }

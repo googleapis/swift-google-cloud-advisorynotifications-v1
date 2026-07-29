@@ -52,14 +52,14 @@ extension Clients {
 
     public func listNotifications(
       request: ListNotificationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.ListNotificationsResponse {
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.ListNotificationsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListNotificationsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudAdvisorynotificationsV1.ListNotificationsResponse
+            -> GoogleCloudAdvisoryNotificationsV1.ListNotificationsResponse
           in
           return try await self.inner.listNotifications(request: r, options: o)
         })
@@ -67,14 +67,14 @@ extension Clients {
 
     public func getNotification(
       request: GetNotificationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.Notification {
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.Notification {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetNotificationRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudAdvisorynotificationsV1.Notification
+            -> GoogleCloudAdvisoryNotificationsV1.Notification
           in
           return try await self.inner.getNotification(request: r, options: o)
         })
@@ -82,14 +82,14 @@ extension Clients {
 
     public func getSettings(
       request: GetSettingsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.Settings {
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.Settings {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetSettingsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudAdvisorynotificationsV1.Settings
+            -> GoogleCloudAdvisoryNotificationsV1.Settings
           in
           return try await self.inner.getSettings(request: r, options: o)
         })
@@ -97,14 +97,14 @@ extension Clients {
 
     public func updateSettings(
       request: UpdateSettingsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAdvisorynotificationsV1.Settings {
+    ) async throws -> GoogleCloudAdvisoryNotificationsV1.Settings {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: false,
         action: {
           (r: UpdateSettingsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudAdvisorynotificationsV1.Settings
+            -> GoogleCloudAdvisoryNotificationsV1.Settings
           in
           return try await self.inner.updateSettings(request: r, options: o)
         })
